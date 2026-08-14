@@ -665,7 +665,7 @@ playSound(clickSound);
     musicBtn.textContent = "🔕 Music: OFF";
     localStorage.setItem("music", "off");
     bgMusic.currentTime = 0;
-bgMusic.play().catch(() => {});
+bgMusic.pause();
 }
 
 });timerBtn.addEventListener("click", function () {
