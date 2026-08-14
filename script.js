@@ -62,7 +62,7 @@ if (soundOn) {
     soundBtn.textContent = "🔊 Sound: ON";
 } else {
     soundBtn.textContent = "🔇 Sound: OFF";
-}let musicOn = localStorage.getItem("music") !== "off";
+}let musicOn = localStorage.getItem("music") === "on";
 
 if (musicOn) {
     musicBtn.textContent = "🎵 Music: ON";
