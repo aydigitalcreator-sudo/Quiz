@@ -648,8 +648,7 @@ closeStats.addEventListener("click", function () {
         soundBtn.textContent = "🔇 Sound: OFF";
         localStorage.setItem("sound", "off");
 
-        clapSound.pause();
-        clapSound.currentTime = 0;
+    
     }
 
 });
