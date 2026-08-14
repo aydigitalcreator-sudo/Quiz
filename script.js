@@ -636,19 +636,24 @@ closeStats.addEventListener("click", function () {
     statistics.style.display = "none";
     home.style.display = "block";
 
-});soundBtn.addEventListener("click", function () {
+}); soundBtn.addEventListener("click", function () {
 
     soundOn = !soundOn;
-playSound(clickSound);
+
     if (soundOn) {
         soundBtn.textContent = "🔊 Sound: ON";
         localStorage.setItem("sound", "on");
+        playSound(clickSound);
     } else {
-        bgMusic.play().catch(() => {});
         soundBtn.textContent = "🔇 Sound: OFF";
         localStorage.setItem("sound", "off");
-        bgMusic.pause();
+
+        clapSound.pause();
+        clapSound.currentTime = 0;
     }
+
+});
+    
 
 });musicBtn.addEventListener("click", function () {
 
