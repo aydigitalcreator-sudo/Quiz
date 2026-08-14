@@ -639,19 +639,21 @@ closeStats.addEventListener("click", function () {
 }); soundBtn.addEventListener("click", function () {
 
     soundOn = !soundOn;
+    playSound(clickSound);
 
     if (soundOn) {
         soundBtn.textContent = "🔊 Sound: ON";
         localStorage.setItem("sound", "on");
-        playSound(clickSound);
     } else {
         soundBtn.textContent = "🔇 Sound: OFF";
         localStorage.setItem("sound", "off");
-
-    
     }
 
 });
+    
+ 
+
+
     
 
 });musicBtn.addEventListener("click", function () {
