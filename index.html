@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Quiz Challenge</title>
+
+    <title>Quiz Challenge</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="confetti"></canvas>
+
+<div class="container">
+
+    <!-- HOME -->
+    <div id="home">
+
+        <h1>🏆 Quiz Challenge</h1>
+
+        <p>Test Your Brain!</p>
+
+        <button id="playBtn">▶ Play</button>
+
+<button id="leaderboardBtn">🏅 Leaderboard</button>
+
+<button id="settingsBtn">⚙ Settings</button>
+
+<button id="shopBtn">🛍️ Shop</button>
+
+<button id="dailyRewardBtn">🎁 Daily Reward</button>
+<button id="statsBtn">📈 Statistics</button>
+<!-- BANNER AD SLOT — replace the div below with your real AdSense <ins> code once approved -->
+<div id="homeAdBanner" style="margin:16px auto;min-height:60px;max-width:320px;border:1px dashed #999;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:12px;color:#999;">
+    Advertisement
+</div>
+</div>
+
+<!-- DAILY REWARD -->
+<div id="dailyReward" style="display:none;">
+
+    <h1>🎁 Daily Reward</h1>
+
+    <p>Choose ONE Gift!</p>
+
+    <button id="giftGreen">🟩 Green Gift</button>
+
+    <button id="giftBlue">🟦 Blue Gift</button>
+
+    <button id="giftRed">🟥 Red Gift</button>
+
+    <p id="dailyMessage"></p>
+
+    <button id="closeDailyReward">⬅ Back</button>
+    </div>
+<!-- STATISTICS -->
+<div id="statistics" style="display:none;">
+
+    <h1>📈 Player Statistics</h1>
+
+    <p>🏆 Best Score: <span id="statBestScore">0</span></p>
+
+    <p>🎮 Games Played: <span id="statGamesPlayed">0</span></p>
+<p>🔥 Daily Streak: <span id="statStreak">0</span></p>
+    <p>🪙 Coins Earned: <span id="statCoins">0</span></p>
+
+    <p>💡 Hints Used: <span id="statHints">0</span></p>
+
+    <p>❤️ Hearts: <span id="statHearts">5</span></p>
+
+    <button id="closeStats">⬅ Back</button>
+</div>
+
+<!-- SHOP -->
+<div id="shop" style="display:none;">
+
+    <h1>🛍️ Shop</h1>
+
+    <h3>🪙 Your Coins:
+        <span id="shopCoins">0</span>
+    </h3>
+
+    <button id="buyHeartsBtn">
+        ❤️ Buy 5 Hearts (100 Coins)
+    </button>
+
+    <button id="buyHintBtn">
+        💡 Buy Hint (50 Coins)
+    </button>
+
+    <button id="closeShop">
+        ⬅ Back
+    </button>
+
+</div>
+    <!-- QUIZ -->
+    <div id="quiz" style="display:none;">
+
+        <h3>❤️ Lives: <span id="lives">5</span></h3>
+<button id="backQuizBtn">⬅ Back</button>
+<h3>🪙 Coins: <span id="coins">0</span></h3>
+
+<h3>⏱ Time Left: <span id="timer">15</span>s</h3>
+
+        <p id="progress">
+            Question 1 / 50
+        </p>
+
+        <h2 id="question"></h2>
+
+        <button class="answer" id="a0"></button>
+
+        <button class="answer" id="a1"></button>
+
+        <button class="answer" id="a2"></button>
+<button class="answer" id="a3"></button>
+<button id="hintBtn">💡 50/50 Hint (50 Coins)</button>
+<h2 id="resultTitle">🎉 Congratulations!</h2>
+<p>
+    Score:
+    <span id="score">0</span>
+</p>
+
+</div>
+
+<!-- RESULT -->
+<div id="result" style="display:none;">
+
+    <h1 id="resultTitle">🎉 Quiz Complete!</h1>
+
+    <h2 id="finalScore"></h2>
+
+    <h2 id="stars"></h2>
+
+    <p id="message"></p>
+
+    <button id="playAgain">
+        🔄 Play Again
+    </button>
+
+    <button id="goHome">
+        🏠 Home
+    </button>
+
+</div>    <!-- LEADERBOARD -->
+    <div id="leaderboard" style="display:none;">
+
+        <h1>🏆 Leaderboard</h1>
+
+        <h2 id="bestScore">
+            Best Score: 0 / 50
+        </h2>
+
+        <button id="closeLeaderboard">
+            ⬅ Back
+        </button>
+        </button>
+
+    </div>
+
+    <!-- SETTINGS -->
+    <div id="settings" style="display:none;">
+
+        <h1>⚙ Settings</h1>
+
+        <button id="soundBtn">
+            🔊 Sound: ON
+        </button>
+
+        <button id="musicBtn">
+            🎵 Music: ON
+        </button>
+
+        <button id="timerBtn">
+            ⏱ Timer: 15s
+        </button>
+
+        <button id="backSettings">
+            ⬅ Back
+        </button>
+<button onclick="location.href='about.html'">
+    ℹ️ About
+</button>
+
+<button onclick="location.href='privacy-policy.html'">
+    🔒 Privacy Policy
+</button>
+
+<button onclick="location.href='terms.html'">
+    📜 Terms & Conditions
+</button>
+
+<button onclick="location.href='credits.html'">
+    🎖 Credits
+</button>
+
+<button onclick="location.href='mailto:aydigitalcreator@gmail.com?subject=Quiz Challenge Support'">
+    📧 Contact Us
+</button>
+
+<p><strong>📱 Version: 1.0.0</strong></p>
+
+<button id="backSettings">
+    ⬅ Back
+</button>        
+
+    </div>
+    
+
+    <!-- OUT OF HEARTS -->
+    <div id="outOfHearts" style="display:none;">
+
+        <h1>💔 Out of Hearts</h1>
+
+        <p>You have no hearts left.</p>
+
+        <button id="watchAdBtn">
+            📺 Watch Ad (+5 Hearts)
+        </button>
+
+        <button id="restartBtn">
+            🔄 Restart
+        </button>
+<button id="homeBtn">
+    🏠 Home
+</button>
+
+</div>
+
+</div>
+<!-- EXIT QUIZ POPUP -->
+<div id="exitPopup" style="display:none;">
+
+    <div class="popupBox">
+
+        <h2>Exit Quiz?</h2>
+
+        <p>Do you want to exit this quiz?</p>
+
+        <button id="noExitBtn">❌ No</button>
+
+        <button id="yesExitBtn">✅ Yes</button>
+ 
+    </div>
+    </div>
+<div id="achievement" style="display:none;">
+
+    <h1>🏆 Achievement Unlocked!</h1>
+
+    <h2 id="achievementTitle"></h2>
+
+    <p id="achievementReward"></p>
+
+    <button id="closeAchievement">OK</button>
+
+</div>
+<div id="splashScreen">
+    <img src="assets/splash.png" alt="Splash Screen">
+</div>
+
+<script src="questions.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
+    
